@@ -4,25 +4,29 @@ import { AppRegistry } from 'react-native';
 
 import Login from './../component/Login';
 import Secured from './../component/Secured';
+import ManageKeyboardLayout from './ManageKeyboardLayout';
 
 
 
 export default class LoginScreen extends React.Component {
 
+  constructor(props) {
+    super(props);
+  }
   state = {
     isLoggedIn: false
   }
 
   render() {
     
-    if(this.state.isLoggedIn){
-      return(
-        <Secured onLogoutPress={() => this.setState({isLoggedIn: false})}/>   
+    if (this.state.isLoggedIn) {
+      return (
+        <Secured nav={this.props.navigation}/>
       );
     }
-    else{
-      return(
-        <Login onLoginPress = {() => this.setState({isLoggedIn: true})}/>
+    else {
+      return (
+        <Login onLoginPress={() => this.setState({ isLoggedIn: true })} pageChange={this.props.navigation}/>
       );
     }
   }

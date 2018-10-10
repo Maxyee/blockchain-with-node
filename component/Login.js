@@ -76,16 +76,16 @@ export default class Login extends Component{
                       console.log(error);
                     }
                 }
-                loginContext.props.appContext.props.navigation.navigate("LoginScreen");
+                // loginContext.props.appContext.props.navigation.navigate("LoginScreen");
             }
         })
-        // .then(() => {
-        //     this.setState({isLoggingIn: false})
-        //     if(proceed){
-        //         this.props.onLoginPress();
-        //     }
-        // })
-        // .done();
+        .then(() => {
+            this.setState({isLoggingIn: false})
+            if(proceed){
+                this.props.onLoginPress();
+            }
+        })
+        .done();
     }
 
     render(){
@@ -117,10 +117,23 @@ export default class Login extends Component{
                     onPress={ this._userLogin }
                     title="Submit"
                 />
+                <Text>Please Login For Better Component</Text>
 
+                <View style={{margin:20}}/>
+                <Text>Do you want learn more about react Native</Text>
+                <Text>Please click the button below for better learning credentials</Text>
+
+                <View style={{margin:20}}/>
                 <Button
-                    title="FeedScreen"
-                    onPress={()=>this.props.navigation.navigate('FeedScreen')}
+                    title="Learn Flex Box"
+                    onPress={()=>this.props.pageChange.navigate('FlexBoxScreen')}
+                />
+
+                <View style={{margin:20}}/>
+                <Button
+                    color = "red"
+                    title="Learn Flex Box Justify"
+                    onPress={()=>this.props.pageChange.navigate('FlexBoxJustifyScreen')}
                 />
             </ScrollView>
         );

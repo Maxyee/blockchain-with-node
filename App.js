@@ -8,6 +8,8 @@ import Secured from './component/Secured';
 import PublicPhotoPage from './component/PublicPhotoPage';
 import LoginScreen from './screens/LoginScreen';
 import FeedScreen from './screens/FeedScreen';
+import FlexBoxScreen from './screens/FlexBoxScreen';
+import FlexBoxJustifyScreen from './screens/FlexBoxJustifyScreen';
 
 export default class App extends React.Component {
   render() {
@@ -30,6 +32,12 @@ const AppStackNavigator = createStackNavigator({
   },
   FeedScreen: {
     screen: FeedScreen
+  },
+  FlexBoxScreen:{
+    screen:FlexBoxScreen
+  },
+  FlexBoxJustifyScreen:{
+    screen:FlexBoxJustifyScreen
   }
 
 })

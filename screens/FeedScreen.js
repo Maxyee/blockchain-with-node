@@ -3,11 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 
 export default class FeedScreen extends React.Component {
-
-  state = {
-    isLoggedIn: false
+  constructor(props){
+    super(prors)
   }
-
+ 
   render() {
     return(
         <View>
