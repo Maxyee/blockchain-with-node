@@ -135,6 +135,13 @@ export default class Login extends Component{
                     title="Learn Flex Box Justify"
                     onPress={()=>this.props.pageChange.navigate('FlexBoxJustifyScreen')}
                 />
+
+                <View style={{margin:20}}/>
+                <Button
+                    color="green"
+                    title="Pubg Game"
+                    onPress={()=>this.props.pageChange.navigate('PubgScreen')}
+                />
             </ScrollView>
         );
     }

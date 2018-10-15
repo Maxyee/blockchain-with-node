@@ -10,6 +10,7 @@ import LoginScreen from './screens/LoginScreen';
 import FeedScreen from './screens/FeedScreen';
 import FlexBoxScreen from './screens/FlexBoxScreen';
 import FlexBoxJustifyScreen from './screens/FlexBoxJustifyScreen';
+import PubgScreen from './screens/PubgScreen';
 
 export default class App extends React.Component {
   render() {
@@ -38,6 +39,9 @@ const AppStackNavigator = createStackNavigator({
   },
   FlexBoxJustifyScreen:{
     screen:FlexBoxJustifyScreen
+  },
+  PubgScreen:{
+    screen:PubgScreen
   }
 
 })
